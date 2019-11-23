@@ -681,6 +681,13 @@ nochat:
         UInt8 xonePdpInit2[] = { 0x06, 0x20, 0x03, 0x02, 0x01, 0x00 };
         UInt8 xoneRumbleBeginInit[] = { 0x09, 0x00, 0x04, 0x09, 0x00, 0x0F, 0x00, 0x00, 0x1D, 0x1D, 0xFF, 0x00, 0x00 };
         UInt8 xoneRumbleEndInit[] = { 0x09, 0x00, 0x05, 0x09, 0x00, 0x0F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
+
+        QueueWrite(&xoneHoriInit, sizeof(xoneHoriInit));
+        QueueWrite(&xoneFw2015Init, sizeof(xoneFw2015Init));
+        QueueWrite(&xonePdpInit1, sizeof(xonePdpInit1));
+        QueueWrite(&xonePdpInit2, sizeof(xonePdpInit2));
+        QueueWrite(&xoneRumbleBeginInit, sizeof(xoneRumbleBeginInit));
+        QueueWrite(&xoneRumbleEndInit, sizeof(xoneRumbleEndInit));
     }
     else
     {
